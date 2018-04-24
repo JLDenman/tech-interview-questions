@@ -204,6 +204,182 @@ namespace tech_interview_questions
             }
             Console.WriteLine($"There are {counter} vowels in the users input" );
             */
+            /*
+           
+
+            // 14. Return the Hypotenuse of a right triankle after given two sides
+            /*
+            Console.WriteLine("Enter side a: ");
+            double a = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter side b: ");
+            double b = Convert.ToDouble(Console.ReadLine());
+            double result = Math.Pow(a, 2) + Math.Pow(b, 2);
+            result = Math.Sqrt(result);
+            Console.WriteLine(result);
+            */
+
+            // 15.Display 10 random numbers between 0 and 30 of which there can't be a duplicate number
+
+
+            // 16.Given a year is the year a leap year and ensure the user provides legitimate value
+
+            /*
+            Console.WriteLine("Enter a year: ");
+            int year = 1900;
+            int.TryParse(Console.ReadLine(), out year);
+            if (year % 4 == 0)
+            {
+                Console.WriteLine("Yes, it;s a leap year!");
+            }
+            else { Console.WriteLine("No it's not a leap year."); }
+            */
+
+            // 17. Number, has to be greater than nine, print out the last number as a word 
+            /*
+            Console.WriteLine("Input a number greater than 9 : ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            
+            if (number>9)
+            {
+                int result = number % 10;
+
+                switch (result)
+                {
+                    case 0:
+                        Console.WriteLine("zero");
+                        break;
+                    case 1:
+                        Console.WriteLine("one");
+                        break;
+                    case 2:
+                        Console.WriteLine("two");
+                        break;
+                    case 3:
+                        Console.WriteLine("three");
+                        break;
+                    case 4:
+                        Console.WriteLine("four");
+                        break;
+                    case 5:
+                        Console.WriteLine("five");
+                        break;
+                    case 6:
+                        Console.WriteLine("six");
+                        break;
+                    case 7:
+                        Console.WriteLine("seven");
+                        break;
+                    case 8:
+                        Console.WriteLine("eight");
+                        break;
+                    case 9:
+                        Console.WriteLine("nine");
+                        break;
+
+                }
+            }
+            else
+            { Console.WriteLine("Please try again, number has to be greater than 9. "); }
+            */
+
+            // 18.Write a programm that does integer division without using % or division
+            /*
+            Console.WriteLine("Type in the number: ");
+            int numerator = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("What are we dividing it by?");
+            int denom = Convert.ToInt32(Console.ReadLine());
+            int result = 0;
+
+            while (numerator>= denom)
+            {
+                numerator -= denom;
+                result++;
+            }
+            Console.WriteLine(result);
+            */
+
+            //Write a program that will reverse a number 
+            /*
+            Console.WriteLine("number: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            int reverse = 0;
+
+            while (num !=0)
+            {
+                reverse *= 10;
+                reverse += (num % 10);
+                num = num / 10;
+            }
+            */
+            // 19. Find the frequency of the word "the" in a string
+            /* {
+                 Console.WriteLine("Enter the string: ");
+                 string s1 = Console.ReadLine();
+                 Console.WriteLine(CountStringOccurences(s1, "the"));
+                 Console.ReadLine();
+             }
+             public static int CountStringOccurences(string text, string pattern)
+             {
+                 int count = 0;
+                 int i = 0;
+                 while (i= text.IndexOf(pattern,i)!=-1)
+                 {
+                     i += pattern.Length;
+                     count++;
+                 }
+                 return count;
+             }
+             */
+            // Find the unique elements in an array
+            /*
+            int tempy = 0;
+            int counter = 0;
+            int[] array = new int[5] { 2, 2, 1, 3, 4 };
+
+            foreach (int e in array)
+            {
+                int count = 0;
+
+                foreach (int tmp in array)//foreach return the index and not the actual value;
+                {
+                    if (e==tmp)
+                    {
+                        count++;
+                        tempy=array[tmp];
+                    }
+                }
+                    if (count < 2) // that means it is unique as requested in the question
+                    {
+                        counter = counter + count;
+                        Console.WriteLine(array.ElementAt(tempy));
+                    }
+                
+            }
+            Console.WriteLine($"Total number of unique elements {counter}.");
+            */
+
+            // Convert upper to lower case without using additional memory and vice versa
+            /*
+            Console.WriteLine("Enter a string.");
+            string input = Console.ReadLine();
+            foreach (char c in input)
+            {
+                Convert.ToInt32(c);
+                if (c >= 65 && c <= 90)
+                {
+                    Console.Write(Convert.ToChar(c + 32));
+                }
+                else if (c >= 97 && c <= 122)
+                {
+                    Console.Write(Convert.ToChar(c - 32));
+                }
+            }
+            Console.ReadLine();
+            */
+
+            
+
+
         }
 
     }
